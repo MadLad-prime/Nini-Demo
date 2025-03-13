@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | The [Last Name]s</title>
+  <style>
+    /* Basic Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Raleway', sans-serif; color: #333; }
+
+    /* Navigation Bar */
+    nav {
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      z-index: 1000;
+    }
+    nav .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: bold;
+      color: #0A2463; /* Navy blue */
+    }
+    nav .dropdown { position: relative; }
+    nav .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      border-radius: 5px;
+    }
+    nav .dropdown:hover .dropdown-content { display: block; }
+    nav .dropdown-content a {
+      display: block;
+      padding: 10px;
+      color: #0A2463;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    nav .dropdown-content a:hover { background: #FFD700; /* Soft gold */ }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: url('images/p1.jpeg') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      margin-bottom: 20px;
+      animation: fadeIn 2s ease-in-out;
+    }
+    .hero button {
+      padding: 10px 20px;
+      font-size: 18px;
+      border: 2px solid white;
+      background: transparent;
+      color: white;
+      cursor: pointer;
+      transition: background 0.3s, color 0.3s;
+      animation: fadeIn 2.5s ease-in-out;
+    }
+    .hero button:hover {
+      background: white;
+      color: #0A2463; /* Navy blue */
+    }
+
+    /* Below the Fold */
+    .featured {
+      padding: 40px 20px;
+      text-align: center;
+      background: #FFC0CB; /* Blush pink */
+    }
+    .featured h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 32px;
+      margin-bottom: 20px;
+      color: #0A2463; /* Navy blue */
+    }
+    .featured-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .featured-item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .featured-item img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s;
+    }
+    .featured-item:hover img { transform: scale(1.1); }
+
+    /* Footer */
+    footer {
+      padding: 20px;
+      text-align: center;
+      background: #0A2463; /* Navy blue */
+      color: white;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="title">NINI</div>
+    <div class="dropdown">
+      <span>Menu</span>
+      <div class="dropdown-content">
+        <a href="index.html">Home</a>
+        <a href="our_story.html">Our Story</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="gally.html">Gallery</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div>
+      <h1>A Love Story</h1>
+      <button>Explore Our Story</button>
+    </div>
+  </section>
+
+  <!-- Below the Fold -->
+  <section class="featured">
+    <h2>Featured Moments</h2>
+    <div class="featured-grid">
+      <div class="featured-item">
+        <img src="C:\Users\dudet\OneDrive\Desktop\NINI\images\p1.jpeg" alt="Moment 1">
+      </div>
+      <div class="featured-item">
+        <img src="C:\Users\dudet\OneDrive\Desktop\NINI\images\p4.jpeg" alt="Moment 2">
+      </div>
+      <div class="featured-item">
+        <img src="C:\Users\dudet\OneDrive\Desktop\NINI\images\p2.jpeg" alt="Moment 3">
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Made with ❤️ by Nuno</p>
+  </footer>
+</body>
+</html>

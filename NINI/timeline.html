@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Timeline | The [Last Name]s</title>
+  <style>
+    /* Basic Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Raleway', sans-serif; color: #333; }
+
+    /* Navigation Bar */
+    nav {
+      position: sticky;
+      top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.9);
+      z-index: 1000;
+    }
+    nav .title {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      font-weight: bold;
+      color: #0A2463; /* Navy blue */
+    }
+    nav .dropdown { position: relative; }
+    nav .dropdown-content {
+      display: none;
+      position: absolute;
+      right: 0;
+      background: white;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      padding: 10px;
+      border-radius: 5px;
+    }
+    nav .dropdown:hover .dropdown-content { display: block; }
+    nav .dropdown-content a {
+      display: block;
+      padding: 10px;
+      color: #0A2463;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+    nav .dropdown-content a:hover { background: #FFD700; /* Soft gold */ }
+
+    /* Hero Section */
+    .hero {
+      height: 100vh;
+      background: url('images/p8.jpeg') no-repeat center center/cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 48px;
+      animation: fadeIn 2s ease-in-out;
+      position: relative;
+      z-index: 1;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.4); /* Dark overlay for better text visibility */
+    }
+
+    /* Timeline Section */
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #FFD700; /* Soft gold */
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .timeline-item {
+      padding: 20px;
+      margin-bottom: 40px;
+      position: relative;
+      width: 50%;
+      opacity: 0;
+      animation: fadeIn 1s ease-in-out forwards;
+    }
+    .timeline-item:nth-child(odd) {
+      left: 0;
+      text-align: right;
+    }
+    .timeline-item:nth-child(even) {
+      left: 50%;
+      text-align: left;
+    }
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #FFD700; /* Soft gold */
+      top: 20px;
+      right: -10px;
+      z-index: 1;
+    }
+    .timeline-item:nth-child(even)::after {
+      left: -10px;
+      right: auto;
+    }
+    .timeline-item h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 24px;
+      color: #0A2463; /* Navy blue */
+      margin-bottom: 10px;
+    }
+    .timeline-item p {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    .timeline-item img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-top: 10px;
+    }
+
+    /* Footer */
+    footer {
+      padding: 20px;
+      text-align: center;
+      background: #0A2463; /* Navy blue */
+      color: white;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="title">Nini</div>
+    <div class="dropdown">
+      <span>Menu</span>
+      <div class="dropdown-content">
+        <a href="index.html">Home</a>
+        <a href="our_story.html">Our Story</a>
+        <a href="timeline.html">Timeline</a>
+        <a href="gally.html">Gallery</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Our Journey Through Time</h1>
+  </section>
+
+  <!-- Timeline Section -->
+  <section class="timeline">
+    <div class="timeline-item">
+      <h2>First Date</h2>
+      <p>We met at Location on Date. It was a magical evening filled with laughter and the purest opium.</p>
+      <img src="images/p2.jpeg" alt="First Date">
+    </div>
+    <div class="timeline-item">
+      <h2>Engagement</h2>
+      <p>On whatever, Partner 1 proposed to Partner 2 at Location. It was a moment we'll never wash off.</p>
+      <img src="images/p1.jpeg" alt="Engagement">
+    </div>
+    <div class="timeline-item">
+      <h2>Wedding Day</h2>
+      <p>We tied the knot on Date at his madas house, surrounded by our drunk ones. Unfortunately, the party was too loud, and everyone, including the children, was arrested. We'll forever remember that beautiful night we spent in the clink.</p>
+      <img src="images/p1.jpeg" alt="Wedding Day">
+    </div>
+    <div class="timeline-item">
+      <h2>Honeymoon</h2>
+      <p>We celebrated our Honeymoon with a trip to the local asylum, antagonizing the inmates, bribing guards to let schizophrenics and bipolars fight. The warden eventually chased us out.</p>
+      <img src="images/p1.jpeg" alt="First Anniversary">
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>Made with ❤️ by Pigeon</p>
+  </footer>
+</body>
+</html>
