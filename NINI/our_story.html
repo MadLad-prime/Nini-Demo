@@ -1,185 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Our Story | The [Last Name]s</title>
-  <style>
-    /* Basic Reset */
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Raleway', sans-serif; color: #333; }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Story | The [Last Name]s</title>
+    <style>
+        /* Basic Reset */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Raleway', sans-serif; color: #333; }
 
-    /* Navigation Bar */
-    nav {
-      position: sticky;
-      top: 0;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-      background: rgba(255, 255, 255, 0.9);
-      z-index: 1000;
-    }
-    nav .title {
-      font-family: 'Playfair Display', serif;
-      font-size: 24px;
-      font-weight: bold;
-      color: #0A2463; /* Navy blue */
-    }
-    nav .dropdown { position: relative; }
-    nav .dropdown-content {
-      display: none;
-      position: absolute;
-      right: 0;
-      background: white;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-      padding: 10px;
-      border-radius: 5px;
-    }
-    nav .dropdown:hover .dropdown-content { display: block; }
-    nav .dropdown-content a {
-      display: block;
-      padding: 10px;
-      color: #0A2463;
-      text-decoration: none;
-      transition: background 0.3s;
-    }
-    nav .dropdown-content a:hover { background: #FFD700; /* Soft gold */ }
+        /* Navigation Bar */
+        nav {
+            position: sticky;
+            top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            z-index: 1000;
+        }
+        nav .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            font-weight: bold;
+            color: #0A2463; /* Navy blue */
+        }
+        nav .dropdown { position: relative; }
+        nav .dropdown-content {
+            display: none;
+            position: absolute;
+            right: 0;
+            background: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 10px;
+            border-radius: 5px;
+        }
+        nav .dropdown:hover .dropdown-content { display: block; }
+        nav .dropdown-content a {
+            display: block;
+            padding: 10px;
+            color: #0A2463;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        nav .dropdown-content a:hover { background: #FFD700; /* Soft gold */ }
 
-    /* Hero Section */
-    .hero {
-      height: 60vh;
-      background: url('images/p2.jpeg') no-repeat center center/cover;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: white;
-    }
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 48px;
-      animation: fadeIn 2s ease-in-out;
-    }
+        /* Hero Section */
+        .hero {
+            height: 60vh;
+            background: url('images/p2.jpeg') no-repeat center center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 48px;
+            animation: fadeIn 2s ease-in-out;
+        }
 
-    /* Story Content */
-    .story-content {
-      padding: 40px 20px;
-      max-width: 800px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .story-content h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 32px;
-      color: #0A2463; /* Navy blue */
-      margin-bottom: 20px;
-      animation: fadeIn 1.5s ease-in-out;
-    }
-    .story-content p {
-      font-size: 18px;
-      line-height: 1.6;
-      margin-bottom: 20px;
-      opacity: 0;
-      animation: fadeIn 2s ease-in-out forwards;
-    }
-    .story-content p:nth-child(2) { animation-delay: 0.5s; }
-    .story-content p:nth-child(3) { animation-delay: 1s; }
-    .story-content p:nth-child(4) { animation-delay: 1.5s; }
+        /* Story Content */
+        .story-content {
+            padding: 40px 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .story-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 32px;
+            color: #0A2463; /* Navy blue */
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        .story-content p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            opacity: 0;
+            animation: fadeIn 2s ease-in-out forwards;
+        }
+        .story-content p:nth-child(2) { animation-delay: 0.5s; }
+        .story-content p:nth-child(3) { animation-delay: 1s; }
+        .story-content p:nth-child(4) { animation-delay: 1.5s; }
 
-    /* Footer */
-    footer {
-      padding: 20px;
-      text-align: center;
-      background: #0A2463; /* Navy blue */
-      color: white;
-    }
+        /* Footer */
+        footer {
+            padding: 20px;
+            text-align: center;
+            background: #0A2463; /* Navy blue */
+            color: white;
+        }
 
-    /* Animations */
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav>
-    <div class="title">Nini</div>
-    <div class="dropdown">
-      <span>Menu</span>
-      <div class="dropdown-content">
-        <a href="index.html">Home</a>
-        <a href="our_story.html">Our Story</a>
-        <a href="timeline.html">Timeline</a>
-        <a href="gally.html">Gallery</a>
-      </div>
-    </div>
-  </nav>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="title">Nini</div>
+        <div class="dropdown">
+            <span>Menu</span>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="our_story.html">Our Story</a>
+                <a href="timeline.html">Timeline</a>
+                <a href="gally.html">Gallery</a>
+            </div>
+        </div>
+    </nav>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <h1>Our Story</h1>
-  </section>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Our Story</h1>
+    </section>
 
-  <!-- Story Content -->
-  <section class="story-content">
-    <h2>How We Met</h2>
-    <p>
-      It all began on a sunny afternoon at my mada's house. We were both staring at the abyss
-      and from the moment we locked eyes, we knew,the stove was left on .
-    </p>
-    <p>
-      Over the next few months, we grew chest hair, sharing countless heroin needles, stale beers, and dreams.
-      Every moment felt like a new entry in our parol officer's report.
-    </p>
-    <p>
-      On march 42, zarathustra proposed to nini behind the post office in embakasi. It was a day filled with love, epinephrine,
-      and the promise of DMT.
-    </p>
-    <p>
-      Today, we continue to build our life together, cherishing every mosquito bite and looking forward to the weekend beers.
-    </p>
-  </section>
+    <!-- Story Content -->
+    <section class="story-content">
+        <h2>How We Met</h2>
+        <p>
+            It all began on a sunny afternoon at my mada's house. We were both staring at the abyss
+            and from the moment we locked eyes, we knew,the stove was left on.
+        </p>
+        <p>
+            Over the next few months, we grew chest hair, sharing countless heroin needles, stale beers, and dreams.
+            Every moment felt like a new entry in our parol officer's report.
+        </p>
+        <p>
+            On march 42, zarathustra proposed to nini behind the post office in embakasi. It was a day filled with love, epinephrine,
+            and the promise of DMT.
+        </p>
+        <p>
+            Today, we continue to build our life together, cherishing every mosquito bite and looking forward to the weekend beers.
+        </p>
+    </section>
 
-  <!-- Footer -->
-  <footer>
-    <p>Made with ❤️ by Nini</p>
-  </footer>
+    <!-- Footer -->
+    <footer>
+        <p>Made with ❤️ by Nini</p>
+    </footer>
 
-  <!-- Audio Narration -->
-  <body>
+    <!-- Audio Narration -->
     <h1>Play MP3 File</h1>
     <audio controls>
         <source src="https://github.com/MadLad-prime/Nini-Demo/raw/main/sing.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
-</body>
 
-  <script>
-    // Ensure audio plays only after user interaction (to comply with browser autoplay policies)
-    document.addEventListener('DOMContentLoaded', () => {
-      const audio = document.getElementById('narration');
-      audio.play().catch(() => {
-        // If autoplay fails, show a button to allow user to play audio manually
-        const playButton = document.createElement('button');
-        playButton.innerText = 'Play Audio';
-        playButton.style.position = 'fixed';
-        playButton.style.bottom = '20px';
-        playButton.style.right = '20px';
-        playButton.style.padding = '10px 20px';
-        playButton.style.background = '#FFD700';
-        playButton.style.color = '#0A2463';
-        playButton.style.border = 'none';
-        playButton.style.borderRadius = '5px';
-        playButton.style.cursor = 'pointer';
-        playButton.addEventListener('click', () => {
-          audio.play();
-          playButton.remove();
+    <script>
+        // Ensure audio plays only after user interaction (to comply with browser autoplay policies)
+        document.addEventListener('DOMContentLoaded', () => {
+            const audio = document.querySelector('audio');
+            audio.play().catch(() => {
+                // If autoplay fails, show a button to allow user to play audio manually
+                const playButton = document.createElement('button');
+                playButton.innerText = 'Play Audio';
+                playButton.style.position = 'fixed';
+                playButton.style.bottom = '20px';
+                playButton.style.right = '20px';
+                playButton.style.padding = '10px 20px';
+                playButton.style.background = '#FFD700';
+                playButton.style.color = '#0A2463';
+                playButton.style.border = 'none';
+                playButton.style.borderRadius = '5px';
+                playButton.style.cursor = 'pointer';
+                playButton.addEventListener('click', () => {
+                    audio.play();
+                    playButton.remove();
+                });
+                document.body.appendChild(playButton);
+            });
         });
-        document.body.appendChild(playButton);
-      });
-    });
-  </script>
+    </script>
 </body>
 </html>
